@@ -1,4 +1,4 @@
-"C:\Users\pvilela\Desktop\light_ctrl\adc.c"
+"C:\Users\pvilela\Desktop\GitHub\LCP\light_ctrl\adc.c"
 -std=c99
 -ferror-limit=0
 -fbracket-depth=512

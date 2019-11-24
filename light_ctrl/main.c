@@ -22,7 +22,8 @@
 #define SERVO_STEP_0            540
 #define SERVO_STEP_10           736
 #define SERVO_STEP_50           1520
-#define SERVO_STEP_100          2500   
+#define SERVO_STEP_100          2500  
+#define TIMER_2S                10
 
 unsigned char led[3] = { 0 };
 unsigned char window = 0;
@@ -126,8 +127,6 @@ void send_message(void)
   uart_send(tx_buffer);
 }
 
-unsigned long reference_time = 0;
-
 int main(void)
 {  
   // Stop watchdog timer to prevent time out reset
@@ -149,13 +148,13 @@ int main(void)
   LPM4;
 
   while (1)
-  {    
+  {  
     check_system();
-    if((TA1CCR1 - reference_time) >= 2000)
-    {
+    if (timer_get_tick() >= TIMER_2S)
+    { 
       send_message();
+      timer_reset_tick();
     }
-    //__delay_cycles(2000000); 
   }
 }
 
@@ -169,7 +168,7 @@ __interrupt void Port_1(void)
     LPM4_EXIT;
     sprintf( tx_buffer, "%s", "System is active!\r\n\n");
     uart_send(tx_buffer);
-    reference_time = TA1CCR1;
+    timer_reset_tick();
   }
   else
   {
