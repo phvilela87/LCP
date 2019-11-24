@@ -30,8 +30,8 @@ int reference_time = 0;
 void timer_init(void)
 {
   TA0CCR0 = 24999;
-  TA0CTL=TASSEL_2 + MC_1 + ID_3;
-  TA0CCTL0|=CCIE;
+  TA0CTL = (TASSEL_2 + MC_1 + ID_3);
+  TA0CCTL0 |= CCIE;
   
   TA1CCTL1 |= OUTMOD_7; 
   TA1CCR0 = (SMCLK/PWM_FREQUENCY)-1;
