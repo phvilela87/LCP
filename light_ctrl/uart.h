@@ -12,7 +12,7 @@
 #define UART_H_
 
 /** Public Declarations */
-void config_UART(void);
+void uart_config(void);
 void uart_send(char * tx_buffer);
 
 #endif /* UART_H_ */

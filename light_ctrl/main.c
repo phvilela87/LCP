@@ -140,7 +140,7 @@ int main(void)
   timer_init();
   adc_init();
   config_interrupt();
-  config_UART();
+  uart_config();
   
   TA1CCR1 = SERVO_STEP_0;
   __delay_cycles(1000000);

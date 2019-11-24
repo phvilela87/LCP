@@ -25,7 +25,7 @@
 
  * @retval	None
  */
-void config_UART(void)
+void uart_config(void)
 {
   P1SEL = BIT1 + BIT2;
   P1SEL2 = BIT1 + BIT2;
