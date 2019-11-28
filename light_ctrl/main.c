@@ -2,6 +2,13 @@
   ******************************************************************************
   * @file           : main.c
   * @brief          : Main program body
+ *******************************************************************************
+ * @attention
+ *
+ * @author         : Pedro Vilela
+ *
+ * All rights are reserved. Reproduction in whole or part is prohibited without
+ * the written consent of the copyright owner.
  *******************************************************************************/
 
 /*********************************************************

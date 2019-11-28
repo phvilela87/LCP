@@ -11,7 +11,9 @@
 #ifndef ADC_H_
 #define ADC_H_
 
-/** Public Declarations */
+/*********************************************************
+    Public functions.
+*********************************************************/
 void adc_init(void);
 unsigned long read_sensor_one(void);
 unsigned long read_sensor_two(void);

@@ -11,7 +11,9 @@
 #ifndef UART_H_
 #define UART_H_
 
-/** Public Declarations */
+/*********************************************************
+    Public functions.
+*********************************************************/
 void uart_config(void);
 void uart_send(char * tx_buffer);
 
